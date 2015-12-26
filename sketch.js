@@ -123,16 +123,21 @@ function change_note() {
   }
 }
 
-
+// Trying to fix mobile bug where toggle is to quick
+var since_toggle = 0;
 function toggleOsc() {
-  if (oscOn) {
-    osc.stop();
-    start_stop_button.html('start');
-  } else {
-    osc.start();
-    start_stop_button.html('stop');
+  console.log(millis());
+  if (millis() - since_toggle > 500) {
+    if (oscOn) {
+      osc.stop();
+      start_stop_button.html('start');
+    } else {
+      osc.start();
+      start_stop_button.html('stop');
+    }
+    oscOn = !oscOn;
+    since_toggle = millis();
   }
-  oscOn = !oscOn;
 }
 
 function keyPressed() {
