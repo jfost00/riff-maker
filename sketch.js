@@ -1,4 +1,5 @@
 var osc;
+var osc_type = "triangle";
 var rifts = [];
 
 //var frequencies = [24-108] //C1 to C8
@@ -73,7 +74,7 @@ function setup() {
   // Oscillator
   osc = new p5.SinOsc();
   osc.amp(amp);
-  osc.setType('sine');
+  osc.setType(osc_type);
   osc.freq(midiToFreq(root));
 
   if(oscOn)
