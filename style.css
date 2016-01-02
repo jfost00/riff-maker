@@ -38,3 +38,36 @@ button {
 h3 {
 	color: rgb(210, 210, 210);
 }
+
+input[type=range]{
+    -webkit-appearance: none;
+    margin-top:5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #9EE;
+    margin-top: -4px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; 
+    cursor:pointer;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #aaa;
+}

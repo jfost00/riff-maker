@@ -131,10 +131,10 @@ function toggleOsc() {
   if (millis() - since_toggle > 500) {
     if (oscOn) {
       osc.stop();
-      start_stop_button.html('start');
+      start_stop_button.html('sound on');
     } else {
       osc.start();
-      start_stop_button.html('stop');
+      start_stop_button.html('sound off');
     }
     oscOn = !oscOn;
     since_toggle = millis();
