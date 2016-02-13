@@ -49,7 +49,7 @@ function setup() {
 
   rift_length_label = createP('Approximate Rift Length: ' + rftl);
   rift_length_label.addClass('middle');
-  rift_length_slider = createSlider(5, 18, rftl);
+  rift_length_slider = createSlider(5, 36, rftl);
   rift_length_slider.addClass('middle');
 
   // Scale Select box
